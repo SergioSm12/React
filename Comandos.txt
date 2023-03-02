@@ -1,3 +1,11 @@
 crear-----> npx create-react-app "nombre"
 Iniciar proyecto ------> npm start
 Instalar routing -------> npm install react-router-dom@6
+Ingresar carpeta mongo ---> cd C:\Program Files\MongoDB\Server\6.0\bin
+Ejecutar Mongo ---> mongod.exe
+-------------------Crear proyecto con vite-----
+iniciar proyecto ---->npm create vite@latest
+ahi pregunta nombre, tecnologia, y finalmente si con js o con ts
+Installar node_modules----> npm install
+Iniciar proyecto ----> npm run dev
+
