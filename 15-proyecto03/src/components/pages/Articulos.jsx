@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Global } from "../../helpers/Global";
+import { Peticion } from "../../helpers/Peticion";
 
 export const Articulos = () => {
   /*Crear constante de articulos */
@@ -10,11 +12,16 @@ export const Articulos = () => {
   }, []);
 
   const conseguirArticulos = async () => {
-    const url = "http://localhost:3900/api/articulos";
+    const url = Global.url + "articulos";
+
+    // desestructuramos la variable datos llamando al helper para hacer la peticion
+    const { datos, cargando  } = await Peticion(url, "GET");
+    /*
     let peticion = await fetch(url, {
       method: "GET",
     });
     let datos = await peticion.json();
+   */
 
     if (datos.status === "success") {
       setArticulos(datos.articles);
